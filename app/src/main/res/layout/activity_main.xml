@@ -1,80 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.luisenrique.formulario.MainActivity">
 
     <LinearLayout
-        android:layout_width="344dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="8dp"
-        app:layout_constraintVertical_bias="0.0">
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="-1dp">
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/iName"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/iName"
-            android:layout_marginTop="@dimen/iTop"/>
+            android:layout_marginTop="@dimen/iTop"
+            android:hint="@string/iName">
+
+            <EditText
+                android:id="@+id/iName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </android.support.design.widget.TextInputLayout>
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fecha de nacimiento"
-            android:textSize="@dimen/textoFechaNacimiento"
             android:layout_marginTop="@dimen/iTop"
-            android:textColor="@color/negro"/>
+            android:text="@string/fecha"
+            android:textColor="@color/negro"
+            android:textSize="@dimen/textoFechaNacimiento" />
 
         <DatePicker
+            android:id="@+id/iFecha"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/calendar"
-            android:datePickerMode="spinner"
-            android:calendarViewShown="false"
-            android:minDate="2000"
-            android:layout_marginTop="@dimen/marginTopCalendar"
             android:layout_gravity="center"
-            android:id="@+id/iFecha"
-            >
-        </DatePicker>
+            android:layout_marginTop="@dimen/marginTopCalendar"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:minDate="2000"/>
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/iTel"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/iTel"            />
+            android:hint="@string/iTel">
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/iEmail"
+            <EditText
+                android:id="@+id/iTel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/iEmail"
-            android:layout_marginTop="@dimen/iTop"/>
+            android:layout_marginTop="@dimen/iTop"
+            android:hint="@string/iEmail">
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/iDescripcion"
+            <EditText
+                android:id="@+id/iEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/iDescripcion"
-            android:layout_marginTop="@dimen/iTop"/>
+            android:layout_marginTop="@dimen/iTop"
+            android:hint="@string/iDescripcion">
+
+            <EditText
+                android:id="@+id/iDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </android.support.design.widget.TextInputLayout>
 
         <Button
             android:id="@+id/btnEnviar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btnEnviar"
             android:layout_marginTop="@dimen/iTopBtn"
-            android:theme="@style/raisedButton"
-            />
-
-
+            android:text="@string/btnEnviar"
+            android:theme="@style/raisedButton" />
 
 
     </LinearLayout>
@@ -82,4 +100,4 @@
 
 
 
-</android.support.constraint.ConstraintLayout>
+</ScrollView>

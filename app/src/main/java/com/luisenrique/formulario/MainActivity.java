@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
             mesR          = parametros.getInt("mes");
             diaR          = parametros.getInt("dia");
 
-            TextInputEditText inombre       = (TextInputEditText) findViewById(R.id.iName);
-            TextInputEditText itelefono     = (TextInputEditText) findViewById(R.id.iTel);
-            TextInputEditText iemail        = (TextInputEditText) findViewById(R.id.iEmail);
-            TextInputEditText idescripcion  = (TextInputEditText) findViewById(R.id.iDescripcion);
+            EditText inombre       = (EditText) findViewById(R.id.iName);
+            EditText itelefono     = (EditText) findViewById(R.id.iTel);
+            EditText iemail        = (EditText) findViewById(R.id.iEmail);
+            EditText idescripcion  = (EditText) findViewById(R.id.iDescripcion);
             DatePicker ifecha               = (DatePicker) findViewById(R.id.iFecha);
 
             inombre.setText(nombreR);
@@ -64,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                TextInputEditText inombre       = (TextInputEditText) findViewById(R.id.iName);
-                TextInputEditText itelefono     = (TextInputEditText) findViewById(R.id.iTel);
-                TextInputEditText iemail        = (TextInputEditText) findViewById(R.id.iEmail);
-                TextInputEditText idescripcion  = (TextInputEditText) findViewById(R.id.iDescripcion);
+                EditText inombre       = (EditText) findViewById(R.id.iName);
+                EditText itelefono     = (EditText) findViewById(R.id.iTel);
+                EditText iemail        = (EditText) findViewById(R.id.iEmail);
+                EditText idescripcion  = (EditText) findViewById(R.id.iDescripcion);
                 DatePicker ifecha               = (DatePicker) findViewById(R.id.iFecha);
 
                 nombre      = inombre.getText().toString();
